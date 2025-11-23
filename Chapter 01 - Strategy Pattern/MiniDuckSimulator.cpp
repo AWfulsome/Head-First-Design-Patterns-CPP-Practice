@@ -1,5 +1,6 @@
 #include <memory>
 
+#include "DuckCall.hpp"
 #include "FlyRocketPowered.hpp"
 #include "MallardDuck.hpp"
 #include "ModelDuck.hpp"
@@ -19,6 +20,11 @@ int main()
     model->perform_fly();
     model->set_fly_behavior(std::make_unique<FlyRocketPowered>());
     model->perform_fly();
+
+    std::unique_ptr<DuckCall> duckCall = std::make_unique<DuckCall>();
+
+    duckCall->display();
+    duckCall->performQuack();
 
     return 0;
 }
