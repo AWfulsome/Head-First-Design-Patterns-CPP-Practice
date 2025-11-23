@@ -19,8 +19,8 @@ public:
     virtual void display() const = 0;
 
 protected:
-    std::unique_ptr<FlyBehavior> flyBehavior_;
-    std::unique_ptr<QuackBehavior> quackBehavior_;
+    std::unique_ptr<FlyBehavior> flyBehavior_ = nullptr;
+    std::unique_ptr<QuackBehavior> quackBehavior_ = nullptr;
 };
 
 #endif // DUCK_HPP
