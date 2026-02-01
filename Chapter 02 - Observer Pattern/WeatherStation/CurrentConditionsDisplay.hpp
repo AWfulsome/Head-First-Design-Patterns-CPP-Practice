@@ -15,11 +15,11 @@ public:
 
     // Observer implementation
     // =======================
-    virtual void update(float temperature, float humidity, float pressure) override;
+    void update(float temperature, float humidity, float pressure) override;
 
     // DisplayElement implementation
     // =============================
-    virtual void display() override;
+    void display() override;
     
 private:
     std::weak_ptr<WeatherData> weatherData_;

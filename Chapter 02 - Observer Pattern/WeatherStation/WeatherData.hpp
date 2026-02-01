@@ -11,9 +11,9 @@ class WeatherData : public virtual Subject
 public:
     // Subject implementation
     // ======================
-    virtual void register_observer(Observer* ob) override;
-    virtual void remove_observer(Observer* ob) override;
-    virtual void notify_observers() override;
+    void register_observer(Observer* ob) override;
+    void remove_observer(Observer* ob) override;
+    void notify_observers() override;
     
     // WeatherData methods
     // ===================

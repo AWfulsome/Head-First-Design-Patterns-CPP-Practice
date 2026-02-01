@@ -15,11 +15,11 @@ public:
 
     // Observer implementation
     // =======================
-    void update(float temperature, float humidity, float pressure);
+    void update(float temperature, float humidity, float pressure) override;
 
     // DisplayElement implementation
     // =============================
-    void display();
+    void display() override;
 
 private:
     float temperature_ = 0.0f;
